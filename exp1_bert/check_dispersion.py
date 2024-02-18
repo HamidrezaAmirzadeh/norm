@@ -1,7 +1,9 @@
 from tqdm import tqdm
 import torch
 from transformers import BertTokenizer
-from norm.src.modeling.modeling_bert import BertModel 
+import sys
+sys.path.append('../src')
+from modeling.modeling_bert import BertModel 
 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
