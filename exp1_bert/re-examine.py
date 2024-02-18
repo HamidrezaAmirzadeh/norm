@@ -1,7 +1,9 @@
-import pickle
 from tqdm import tqdm
 import torch
-from transformers import BertTokenizer, BertModel
+from transformers import BertTokenizer
+import sys
+sys.path.append('../src')
+from modeling.modeling_bert import BertModel 
 
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
